@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Pulse</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #111;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #667eea;
+        }
+
+        /* MAIN */
+        .container {
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        /* FORM */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            background: #667eea;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #764ba2;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Digital Pulse 🚀</h1>
+        <p>Менің алғашқы заманауи веб-сайтым</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#">Басты бет</a>
+        <a href="#">Біз туралы</a>
+        <a href="#">Қызметтер</a>
+        <a href="#">Байланыс</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <div class="card">
+            <h2>Қош келдіңіз!</h2>
+            <p>Бұл менің HTML және CSS арқылы жасалған алғашқы стильді веб-сайтым.</p>
+
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="tech image">
+        </div>
+
+        <div class="card">
+            <h2>Біз туралы</h2>
+            <p>Мен веб-бағдарламалауды үйреніп жатырмын. Бұл жоба — менің алғашқы тәжірибем.</p>
+        </div>
+
+        <!-- FORM -->
+        <div class="card">
+            <h2>Байланыс формасы</h2>
+            <form>
+                <input type="text" placeholder="Атыңыз" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Хабарлама"></textarea>
+                <button type="submit">Жіберу</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 | Digital Pulse | Автор: Сен 😎</p>
+    </footer>
+
+</body>
+</html>
