@@ -1,174 +1,202 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Pulse</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Pulse</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
 
-        body {
-            background: #f4f6f9;
-        }
+body {
+    background: #f4f6f9;
+}
 
-        /* HEADER */
-        header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-        header h1 {
-            font-size: 36px;
-        }
+header img {
+    width: 70px;
+    display: block;
+    margin: 0 auto 10px;
+}
 
-        /* NAVIGATION */
-        nav {
-            background: #111;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+/* NAV */
+nav {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-        nav a {
-            color: white;
-            padding: 15px 20px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+nav a {
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+}
 
-        nav a:hover {
-            background: #667eea;
-        }
+nav a:hover {
+    background: #667eea;
+}
 
-        /* MAIN */
-        .container {
-            padding: 30px;
-            max-width: 1000px;
-            margin: auto;
-        }
+/* SECTION */
+.section {
+    display: none;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
+.active {
+    display: block;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-        img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
+/* IMAGE */
+img.main-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
 
-        /* FORM */
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+}
 
-        input, textarea {
-            margin: 10px 0;
-            padding: 12px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
 
-        button {
-            padding: 12px;
-            border: none;
-            background: #667eea;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+button {
+    background: #667eea;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
 
-        button:hover {
-            background: #764ba2;
-        }
+button:hover {
+    background: #764ba2;
+}
 
-        /* FOOTER */
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        /* RESPONSIVE */
-        @media(max-width: 600px) {
-            header h1 {
-                font-size: 24px;
-            }
-
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Digital Pulse 🚀</h1>
-        <p>Менің алғашқы заманауи веб-сайтым</p>
-    </header>
+<!-- HEADER -->
+<header>
+    <img src="logo.png" alt="logo">
+    <h1>Digital Pulse 🚀</h1>
+    <p>Заманауи веб-сайт</p>
+</header>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="#">Басты бет</a>
-        <a href="#">Біз туралы</a>
-        <a href="#">Қызметтер</a>
-        <a href="#">Байланыс</a>
-    </nav>
+<!-- NAV -->
+<nav>
+    <a onclick="showSection('home')">Басты бет</a>
+    <a onclick="showSection('about')">Біз туралы</a>
+    <a onclick="showSection('services')">Қызметтер</a>
+    <a onclick="showSection('contact')">Байланыс</a>
+</nav>
 
-    <!-- MAIN CONTENT -->
-    <div class="container">
+<!-- HOME -->
+<div id="home" class="section active">
+    <div class="card">
+        <h2>Қош келдіңіз!</h2>
+        <p>Бұл менің толық функционалды веб-сайтым. Мұнда HTML, CSS және JavaScript қолданылды.</p>
+        <img class="main-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+    </div>
+</div>
 
-        <div class="card">
-            <h2>Қош келдіңіз!</h2>
-            <p>Бұл менің HTML және CSS арқылы жасалған алғашқы стильді веб-сайтым.</p>
+<!-- ABOUT -->
+<div id="about" class="section">
+    <div class="card">
+        <h2>Біз туралы</h2>
+        <p>Digital Pulse — бұл заманауи веб-сайт. Бұл жоба веб-бағдарламалауды үйрену мақсатында жасалды. Қарапайым, түсінікті және ыңғайлы интерфейс қолданылды.</p>
+    </div>
+</div>
 
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="tech image">
-        </div>
+<!-- SERVICES -->
+<div id="services" class="section">
+    <div class="card">
+        <h2>Қызметтер</h2>
+        <p>Біздің сайт келесі қызметтерді ұсынады:</p>
+        <ul>
+            <li>🌐 Веб-сайт жасау</li>
+            <li>🎨 Дизайн және интерфейс құру</li>
+            <li>⚡ Жылдам және responsive беттер</li>
+            <li>💻 Frontend дамыту (HTML, CSS, JS)</li>
+        </ul>
+    </div>
+</div>
 
-        <div class="card">
-            <h2>Біз туралы</h2>
-            <p>Мен веб-бағдарламалауды үйреніп жатырмын. Бұл жоба — менің алғашқы тәжірибем.</p>
-        </div>
-
-        <!-- FORM -->
-        <div class="card">
-            <h2>Байланыс формасы</h2>
-            <form>
-                <input type="text" placeholder="Атыңыз" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Хабарлама"></textarea>
-                <button type="submit">Жіберу</button>
-            </form>
-        </div>
-
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <div class="card">
+        <h2>Байланыс</h2>
+        <p>📞 Телефон: 7716268766</p>
+        <p>📧 Email: digital@pulse.com</p>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 | Digital Pulse | Автор: Сен 😎</p>
-    </footer>
+    <div class="card">
+        <h2>Өтініш қалдыру</h2>
+        <form onsubmit="sendForm(event)">
+            <input type="text" placeholder="Атыңыз" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Хабарлама"></textarea>
+            <button type="submit">Жіберу</button>
+        </form>
+
+        <p id="result" style="color:green;"></p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Digital Pulse | Автор: Балтабай Ернур 😎</p>
+</footer>
+
+<!-- JS -->
+<script>
+function showSection(id) {
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+function sendForm(event) {
+    event.preventDefault();
+    document.getElementById("result").innerText = "✅ Өтінішіңіз қабылданды!";
+}
+</script>
 
 </body>
 </html>
